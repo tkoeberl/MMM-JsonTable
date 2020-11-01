@@ -3,7 +3,7 @@ var request = require('request');
 
 module.exports = NodeHelper.create({
 	start: function () {
-		console.log('MMM-JsonTable helper started...');
+		console.log('MMM-Sonnen helper started...');
 	},
 
 	getJson: function (url) {
@@ -13,7 +13,7 @@ module.exports = NodeHelper.create({
 			if (!error && response.statusCode == 200) {
 				var json = JSON.parse(body);
 				// Send the json data back with the url to distinguish it on the receiving part
-				self.sendSocketNotification("MMM-JsonTable_JSON_RESULT", {url: url, data: json});
+				self.sendSocketNotification("MMM-Sonnen_JSON_RESULT", {url: url, data: json});
 			}
 		});
 
@@ -21,7 +21,7 @@ module.exports = NodeHelper.create({
 
 	//Subclass socketNotificationReceived received.
 	socketNotificationReceived: function (notification, url) {
-		if (notification === "MMM-JsonTable_GET_JSON") {
+		if (notification === "MMM-Sonnen_GET_JSON") {
 			this.getJson(url);
 		}
 	}

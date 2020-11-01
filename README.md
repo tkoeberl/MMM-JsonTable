@@ -14,10 +14,7 @@ git clone https://github.com/tkoeberl/MMM-Sonnen.git
 | updateInterval | 10000 | Milliseconds between the refersh |
 | values | [["USOC","User state of charge:","%"],["Production_W","PV Production in watts:","W"],["Consumption_W","House comsumption:","W"]] | Array with [[keyOJson],[keyToShow],[unitToShow]]
 
-## Result
-![](demo.png)
-
-## Configuration
+## Configuration Example
 ```
 {
         module: 'MMM-Sonnen',
@@ -31,6 +28,5 @@ git clone https://github.com/tkoeberl/MMM-Sonnen.git
 }
 ```
 
-
-
-
+## Result
+![](demo.png)
